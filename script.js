@@ -84,7 +84,7 @@ $(document).ready(function(){
             
             (formType === 'company') {
                 var numPieces = parseInt($(this).val());
-                if ( numPieces < 10) {
+                if ( numPieces < 1) {
                     isValid = false;
                     showError('Number of Pieces for company must be greater than or equal to 10.');
                     return false; 
