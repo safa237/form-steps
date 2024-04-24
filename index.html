@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-step form</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="">
+            <div class="card px-0 pt-4 pb-0 mt-5 mb-3">
+                <h2 id="heading">Fill form to request car spare parts</h2>
+                
+                <form id="msform">
+                   
+
+                    
+                    <fieldset>
+                        <div class="">
+                            
+                            <div class="flexInfo" >
+
+                        
+                                
+                        <div class="info">
+                            <label class="fieldlabels">Choose Car Manufacturer:</label> 
+                            <div class="selectdiv" ><select class="required" name="carManufacturer">
+                                <option value="Toyota">Toyota</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Ford">Ford</option>
+                                
+                            </select></div>
+                        </div>
+
+                        <div class="info">
+                            <label class="fieldlabels">Choose Car Model:</label>
+                            <div class="selectdiv" > <select class="required" name="carModel">
+                                <option value="Camry">Camry</option>
+                                <option value="Corolla">Corolla</option>
+                                <option value="Prius">Prius</option>
+                            </select></div>
+                        </div>
+
+                        <div class="info">
+                            <label class="fieldlabels">Choose Model year:</label>
+                            <div class="selectdiv" ><select class="required" name="carYear" >
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                
+                                
+                            </select></div>
+                        </div>
+
+                        <div class="info ">
+    <label class="fieldlabels">Select Type:</label>
+    <div class="flextype ">
+        <div class="checkbox-container">
+            <input type="radio" class="required" name="formType" id="individualCheckbox" value="individual" required>
+            <label for="individualCheckbox">individual</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="radio" class="required" name="formType" id="companyCheckbox" value="company" required>
+            <label for="companyCheckbox">company</label>
+        </div>
+    </div>
+</div>
+                        
+
+                        </div>
+                        </div> 
+
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <div class="error-container"></div>
+
+                    </fieldset>
+
+                    
+                    
+
+                    
+                    
+                    <fieldset>
+
+                        <div class="">
+                            
+                            <div class="infotype">
+                            <label class=" fieldlabels" >Name of Piece: *</label> <input name="pieceName" class="required" type="text"   /> 
+                            </div>
+                            <div class="infotype">
+                            <label class=" fieldlabels">Number of Pieces: *</label> <input name="numberOfPieces" class="required" type="number"  min="1"  /> 
+                            </div>
+                            <div class="infotype">
+                            <label class="fieldlabels">Serial Number    (for company): *</label> 
+                            <input class=" serialNumber" type="text"   /> 
+                            </div>
+                            <div class="infotype carBodyNumber">
+                                <label class="fieldlabels">Car Body Number: *</label>
+                                <input name="carBodyNumber" class="carBodyNumber" type="text" style="display: none;" />
+                            </div>
+
+                            <div class="infotype">
+                                <label class="fieldlabels">Description :</label>
+                                <textarea placeholder="option"  rows="4" cols="50"></textarea>
+                            </div>
+
+                            <div class="infotype">
+                                <label class="fieldlabels">Upload image of piece (option) :</label> 
+                                <input type="file" name="pic" accept="image/*" multiple> 
+                            </div> 
+                            
+                            
+                        </div> 
+                        <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        <div class="error-container"></div>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <div class="">
+                            <div class="infotype">
+                                <label class="fieldlabels">Username: *</label> <input  type="text" class="required"  name="uname" placeholder="UserName" />
+                            </div>
+                            <div class="infotype">
+                                <label class="fieldlabels">Email: *</label> <input type="email" class="required"  name="email" placeholder="Email Id" />
+                            </div>
+                            <div class="infotype">
+                                <label class="fieldlabels">Password: *</label>
+                                <input type="password" class="required" name="pwd" id="pwd" placeholder="Password" />
+                            </div>
+                            <div class="infotype">
+                                <label class="fieldlabels">Confirm Password: *</label>
+                                <input type="password" class="required" name="cpwd" id="cpwd" placeholder="Confirm Password" />
+                            </div> 
+
+                        
+    
+                            
+                        </div> 
+                        <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        <div class="error-container"></div>
+                    </fieldset>
+                    
+                    
+
+                    <fieldset>
+                        <div class="">
+                            <div style="display: flex; flex-direction: row;">
+
+                               
+                                
+
+                            <div class="info infotype">
+                                <label class="fieldlabels">Shipping type:</label>
+                                <div class="flextype">
+                                    <div class="checkbox-container">
+                                        <input type="radio"  name="formType"  value="myself" >
+                                        <label for="individualCheckbox">myself</label>
+                                    </div>
+                                    <div class="checkbox-container">
+                                        <input type="radio"  name="formType"  value="freind" >
+                                        <label for="companyCheckbox">freind</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                            <div class="infotype">
+                                <label class="arabic fieldlabels">full name (Arabic): *</label> 
+                                <input type="text" class="required"  name="unamear"  />
+                            </div>
+
+                            <div class="infotype">
+                                <label class="fieldlabels">full name (English):*</label> 
+                                <input type="text" class="required"  name="unameen"  />
+                            </div>
+
+                            <div class="info">
+                                <label class="fieldlabels">Country:</label>
+                                <div class="selectdiv"><select class="required" name="country">
+                                    <option value="eg">Egypt</option>
+                                    <option value="in">India</option>
+                                    <option value="lon">London</option>
+                                    <option value="fr">french</option>
+                                    <option value="pales">palestine</option>
+                                </select> </div>
+                            </div>
+
+                            <div class="infotype">
+                                <label class="fieldlabels">City:*</label> 
+                                <input type="text" class="required"  name="city"  />
+                            </div>
+                            <div class="infotype">
+                                <label class="fieldlabels">Neighborhood :*</label> 
+                                <input type="text" class="required"  name="neigh"  />
+                            </div>
+
+                            <div class="infotype">
+                                <label class="fieldlabels">Zip code :*</label> 
+                                <input type="text" class="required"  name="zip"  />
+                            </div>
+                            <div class="infotype">
+                                <label class="fieldlabels">Address :*</label>
+                                <textarea class="required" name="add"  rows="4" cols="50"></textarea>
+                            </div>
+                            
+    
+                        
+    
+                            
+                        </div> 
+                        <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        <div class="error-container"></div>
+                        </fieldset>
+                
+                       
+
+
+                        <fieldset>
+                            <div class="">
+                                <div class="">
+                                    <div class="">
+                                        <strong><h2 class="fs-title">Review Your Entries:</h2></strong>
+                                    </div>
+                                </div> 
+                        
+                                <div class="">
+                                    <div class="">
+                                        <div class="">
+                                            <label class="">Car Manufacturer: <span id="manufacturer"></span></label>
+                                        </div>
+                        
+                                        <div class="">
+                                            <label class="">Car Model: <span id="carModel"></span></label>
+                                        </div>
+                        
+                                        <div class="">
+                                            <label class="">Model year: <span id="modelYear"></span></label>
+                                        </div>
+                        
+                                        <div class="">
+                                            <label class="">Type: <span id="formType"></span></label>
+                                        </div>
+                                    </div>
+                                </div> 
+                        
+                                <div class="">
+                                    <div class="">
+                                        <label class="">Name of Piece: <span id="pieceName"></span></label>  
+                                    </div>
+                                    <div class="">
+                                        <label class="">Number of Pieces: <span id="pieceCount"></span></label> 
+                                    </div>
+                        
+                                    <div class="">
+                                        <label class="">Car Body Number: <span id="carBodyNumber"></span></label>
+                                    </div>
+                                </div> 
+                        
+                                <div class="">
+                                    <div class="">
+                                        <label class="">Username: <span id="username"></span></label> 
+                                    </div>
+                                    <div class="">
+                                        <label class="">Email: <span id="email"></span></label> 
+                                    </div>
+                                    <div class="">
+                                        <label class="">Password: <span id="password"></span></label>
+                                    </div>
+
+                                    
+                                   
+                                        <div class="">
+                                            <label class="">Full name (Arabic): <span id="arabicName"></span></label> 
+                                        </div>
+                            
+                                        <div class="">
+                                            <label class="">Full name (English): <span id="englishName"></span></label> 
+                                        </div>
+    
+                                        <div class="">
+                                            <label class="">Country: <span id="country"></span></label>
+                                        </div>
+                            
+                                        <div class="">
+                                            <label class="">City: <span id="city"></span></label> 
+                                        </div>
+                                        <div class="">
+                                            <label class="">Neighborhood: <span id="neighborhood"></span></label> 
+                                        </div>
+                            
+                                        <div class="">
+                                            <label class="">Zip code: <span id="zipCode"></span></label> 
+                                        </div>
+                                        <div class="">
+                                            <label class="">Address: <span id="address"></span></label>
+                                        </div>
+                                    
+                                    
+                                </div> 
+                        
+                                
+                            </div> 
+                        
+                           
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    
+                                    
+                                    <input  name="submit" class="show-modal action-button" value="Confirm" />
+                                </div>
+                               
+                                <section>
+                                    <!-------modaalalllll-->
+                                   <span class="overlay"></span>
+                                   <div class="modal-box">
+                                       
+                                     
+                                     <h3>The application has been received and is being reviewed.</h3>
+                                     <div class="buttons">
+                                       <button class="close-btn">Ok</button>
+                                     </div>
+                                   </div>
+                                 </section>
+                            </div>
+                        </fieldset>
+            
+                        
+    
+
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  
+</body>
+</html>
